@@ -30,7 +30,7 @@ class AudioToWordcloudConverter:
         wordcloud = WordCloud().generate(cleaned)
         plt.imshow(wordcloud, interpolation='bilinear')
         plt.axis("off")
-        plt.savefig(name + '.png', dpi=100)
+        plt.savefig(name + '.png', dpi=300)
 
     def convert_audio_to_wordcloud(self, mediaUrl, wordcloudName):
         jobId = self.submit_job(mediaUrl)
